@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(151, 90, 167);
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+main div {
+    width: 400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square {
+    width: 120px;
+    height: 120px;
+    border-radius: 8%;
+    background: #eee;
+    font-size: 48px;
+    margin: 8px;
+    cursor: pointer;
+    color: #eee;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player, .winner {
+    height: 48px;
+    font-size: 32px;
+    margin-top: 8px;
+}
+
+button {
+    margin-top: 10px;
+    min-width: 100px;
+    min-height: 30px;
+    padding: 24px 64px;
+    background: rgb(90, 3, 124);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: rgb(141, 2, 196);
+}

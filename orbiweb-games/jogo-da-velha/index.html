@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>JOGO DA VELHA</h1>
+    <main>
+        <div>
+            <div id="1" class="square content" onclick="chooseSquare(this.id)">-</div>
+            <div id="2" class="square content" onclick="chooseSquare(this.id)">-</div>
+            <div id="3" class="square content" onclick="chooseSquare(this.id)">-</div>
+        </div>
+        <div>
+            <div id="4" class="square content" onclick="chooseSquare(this.id)">-</div>
+            <div id="5" class="square content" onclick="chooseSquare(this.id)">-</div>
+            <div id="6" class="square content" onclick="chooseSquare(this.id)">-</div>
+        </div>
+        <div>
+            <div id="7" class="square content" onclick="chooseSquare(this.id)">-</div>
+            <div id="8" class="square content" onclick="chooseSquare(this.id)">-</div>
+            <div id="9" class="square content" onclick="chooseSquare(this.id)">-</div>
+        </div>
+    </main>
+
+    <div>
+        <div class="player">
+            <label>Jogador: </label>
+            <label id="current-player"></label>
+        </div>
+        <div class="winner">
+            <label>Vencedor: </label>
+            <label id="winner-player"></label>
+        </div>
+        <div>
+            <button onclick="reset()">Reiniciar</button>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
