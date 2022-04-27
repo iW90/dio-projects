@@ -20,7 +20,7 @@ function start() {
 	let salvos = 0;
 	let perdidos = 0;
 	let posicaoY = parseInt(Math.random() * 334);
-	const TECLA = {
+	let TECLA = {
 			W: 87,
 			S: 83,
 			D: 68
@@ -71,7 +71,7 @@ function start() {
 	//Função que movimenta o jogador
 	function movejogador() {
 		if (jogo.pressionou[TECLA.W]) {
-			let topo = parseInt($("#jogador").css("top"));
+			var topo = parseInt($("#jogador").css("top"));
 			$("#jogador").css("top", topo -10);
 
 			if (topo <= 0) {
@@ -80,7 +80,7 @@ function start() {
 		}
 		
 		if (jogo.pressionou[TECLA.S]) {
-			let topo = parseInt($("#jogador").css("top"));
+			var topo = parseInt($("#jogador").css("top"));
 			$("#jogador").css("top", topo +10);
 
 			if (topo >= 434) {	
@@ -160,12 +160,12 @@ function start() {
 
 	// Função de colisão entre os objetos
 	function colisao() {
-		let colisao1 = ($("#jogador").collision($("#inimigo1")));
-		let colisao2 = ($("#jogador").collision($("#inimigo2")));
-		let colisao3 = ($("#disparo").collision($("#inimigo1")));
-		let colisao4 = ($("#disparo").collision($("#inimigo2")));
-		let colisao5 = ($("#jogador").collision($("#amigo")));
-		let colisao6 = ($("#inimigo2").collision($("#amigo")));
+		var colisao1 = ($("#jogador").collision($("#inimigo1")));
+		var colisao2 = ($("#jogador").collision($("#inimigo2")));
+		var colisao3 = ($("#disparo").collision($("#inimigo1")));
+		var colisao4 = ($("#disparo").collision($("#inimigo2")));
+		var colisao5 = ($("#jogador").collision($("#amigo")));
+		var colisao6 = ($("#inimigo2").collision($("#amigo")));
 
 		// jogador com o inimigo1
 		if (colisao1.length > 0) {
