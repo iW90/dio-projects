@@ -11,16 +11,16 @@ function start() {
 	$("#fundoGame").append('<div id="energia"></div>');
 
 	//Principais variáveis do jogo
-	var jogo = {}
-	var energiaAtual = 3;
-	var velocidade = 5;
-	var podeAtirar = true;
-	var fimdejogo = false;
-	var pontos = 0;
-	var salvos = 0;
-	var perdidos = 0;
-	var posicaoY = parseInt(Math.random() * 334);
-	var TECLA = {
+	let jogo = {}
+	let energiaAtual = 3;
+	let velocidade = 5;
+	let podeAtirar = true;
+	let fimdejogo = false;
+	let pontos = 0;
+	let salvos = 0;
+	let perdidos = 0;
+	let posicaoY = parseInt(Math.random() * 334);
+	const TECLA = {
 			W: 87,
 			S: 83,
 			D: 68
@@ -28,12 +28,12 @@ function start() {
 
 	jogo.pressionou = [];
 
-	var somDisparo=document.getElementById("somDisparo");
-	var somExplosao=document.getElementById("somExplosao");
-	var musica=document.getElementById("musica");
-	var somGameover=document.getElementById("somGameover");
-	var somPerdido=document.getElementById("somPerdido");
-	var somResgate=document.getElementById("somResgate");
+	const somDisparo=document.getElementById("somDisparo");
+	const somExplosao=document.getElementById("somExplosao");
+	const musica=document.getElementById("musica");
+	const somGameover=document.getElementById("somGameover");
+	const somPerdido=document.getElementById("somPerdido");
+	const somResgate=document.getElementById("somResgate");
 
 	//Música em loop
 	musica.addEventListener("ended", function() {musica.currentTime = 0; musica.play();}, false);
@@ -71,7 +71,7 @@ function start() {
 	//Função que movimenta o jogador
 	function movejogador() {
 		if (jogo.pressionou[TECLA.W]) {
-			var topo = parseInt($("#jogador").css("top"));
+			let topo = parseInt($("#jogador").css("top"));
 			$("#jogador").css("top", topo -10);
 
 			if (topo <= 0) {
@@ -80,7 +80,7 @@ function start() {
 		}
 		
 		if (jogo.pressionou[TECLA.S]) {
-			var topo = parseInt($("#jogador").css("top"));
+			let topo = parseInt($("#jogador").css("top"));
 			$("#jogador").css("top", topo +10);
 
 			if (topo >= 434) {	
@@ -160,12 +160,12 @@ function start() {
 
 	// Função de colisão entre os objetos
 	function colisao() {
-		var colisao1 = ($("#jogador").collision($("#inimigo1")));
-		var colisao2 = ($("#jogador").collision($("#inimigo2")));
-		var colisao3 = ($("#disparo").collision($("#inimigo1")));
-		var colisao4 = ($("#disparo").collision($("#inimigo2")));
-		var colisao5 = ($("#jogador").collision($("#amigo")));
-		var colisao6 = ($("#inimigo2").collision($("#amigo")));
+		let colisao1 = ($("#jogador").collision($("#inimigo1")));
+		let colisao2 = ($("#jogador").collision($("#inimigo2")));
+		let colisao3 = ($("#disparo").collision($("#inimigo1")));
+		let colisao4 = ($("#disparo").collision($("#inimigo2")));
+		let colisao5 = ($("#jogador").collision($("#amigo")));
+		let colisao6 = ($("#inimigo2").collision($("#amigo")));
 
 		// jogador com o inimigo1
 		if (colisao1.length > 0) {
